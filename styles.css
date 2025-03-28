@@ -1,0 +1,109 @@
+/*Pre define attributes to zero*/
+body {
+    margin: 0;
+}
+p, h1, h4{
+    padding: 0; 
+    margin: 0; 
+}
+
+
+/*------------------ Pre determined formatting (for certain elements)----------------------------------------------------------------*/
+
+/*0000000000000000 Font Classes 00000000000000000000*/
+
+/*Manrope font with weight of 100*/
+.manrope-weight100{
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*Roboto-regular*/
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/*------------------ Header Parts ---------------------------------------------------------------------------------------------------*/
+/*------------------ Header Parts ---------------------------------------------------------------------------------------------------*/
+/*------------------ Header Parts ---------------------------------------------------------------------------------------------------*/
+header {
+    background-color: aqua;
+    width: 100%;
+}
+
+nav {
+    overflow: hidden;
+}
+
+/* Navbar menu formatting main */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the menu items */
+    align-items: center;
+}
+
+nav ul li {
+    border: 2px solid black;
+    margin-right: 10px; /* Adjust margin as needed */
+    padding: 20px 16px;
+}
+
+/* Float right search bar */
+nav ul li.right {
+    margin-left: auto;
+}
+
+/* Title bar formatting */
+nav ul li.brand {
+    width: 300px;
+}
+
+/*About, services, home formatting*/
+nav ul li.menu{
+    width: 200px;
+}
+nav ul li p{
+    text-align: center;
+    /*resets the p tag margins and paddings, since the p tags have a predetermined height value*/
+}
+
+/*------------------ Section Styling ---------------------------------------------------------------------------------------------------*/
+/*------------------ Section Styling ---------------------------------------------------------------------------------------------------*/
+/*------------------ Section Styling ---------------------------------------------------------------------------------------------------*/
+
+
+/*------------------ Intro part Styling ---------------------------------------------------------------------------------------------------*/
+/*------------------ Intro part Styling ---------------------------------------------------------------------------------------------------*/
+.intro{
+    /*Background Formatting*/
+    background-image: url('swissAlpsIntroPic.jpg');
+    background-size: cover;
+    /**/background-position: auto 10px;/**/
+
+    /*sizing*/
+    height: 500px;
+    width: 100%;
+}
+
+.intro #introTxt1, #introTxt2{
+    /*Text Allignment*/
+    margin-left: 200px; /*Allign slightly to the left*/
+}
+.intro #introTxt1{ /*pertains to the one that reads "Switzerland"*/
+    padding-top: 100px;
+
+    /*Manrope font with weight of 100*/
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 100px;
+}
