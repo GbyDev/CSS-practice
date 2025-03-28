@@ -1,0 +1,46 @@
+/*Images*/
+#mountain1{
+    background-image: url("assets/mount1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#mountain2{
+    background-image: url("assets/mount2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#mountain3{
+    background-image: url("assets/mount3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#lake1{
+    background-image: url("assets/lake1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#lake2{
+    background-image: url("assets/lake2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#lake3{
+    background-image: url("assets/lake3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#village1{
+    background-image: url("assets/village1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#village2{
+    background-image: url("assets/village2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#village3{
+    background-image: url("assets/village3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

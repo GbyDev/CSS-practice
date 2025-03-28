@@ -1,0 +1,368 @@
+/*Predetermined Styles*/
+
+/*Variables*/
+//IMG SIZE VARIABLES
+$section_img_width: 13vw;
+$section_img_height: 6.5vw;
+
+$article_centerImg_width: 13vw;
+$article_centerImg_height: 28vw;
+
+$article_sideImg_width: 13vw;
+$article_sideImg_height: 24vw;
+
+$footer_img_size: 5vw; //since its a square img, same width and height properties
+
+
+//FONT SIZE VARIABLES
+$nav_companyBrand_p_fontSize: 1.5vw;
+$nav_p_fontSize: 1.2vw;
+
+$section_h1_fontSize: 4vw;
+$section_p_fontSize: 2vw;
+
+$article_h2_fontSize: 2.5vw; //25px - test size
+$article_p_fontSize: 1.5vw; //15px - test size
+$article_h1_fontSize: 4vw;
+
+$footer_p_fontSize: 1.5vw;
+$footer_h1_fontSize: 2vw;
+
+//Other important attributes:
+$article_txtContainer_padding: 2%;
+$article_hr_width: 25vw;
+
+/*Global Attributes*/
+*{
+    box-sizing: border-box;
+    padding: 0.1px 0 0 0;
+    margin: 0;
+    li{
+        list-style-type: none;
+    }
+    hr{
+        height: 1px;
+        border: none;
+    }
+    h2{
+        text-align: center;
+    }
+    a:hover{
+        background-color: #03c2fc;
+    }
+}
+
+nav {
+    padding: 1% 1%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(255,255,255,0); 
+    transition: 0.3s ease-in;
+    
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1%;
+        margin: auto 70px auto 70px;
+    }
+    .companyBrand{
+        flex-grow: 4;
+        justify-content: flex-start;
+
+        p{
+            font-size: $nav_companyBrand_p_fontSize;
+        }
+    }
+    li{
+        padding: 3px 3px 3px 3px;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-grow: .5;
+
+        div{
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            margin-top: -5.5px;
+
+            input, button {
+                border: none;
+                background-color: rgba(255,255,255,0); /*Transparent bg*/
+                border-bottom: 1px solid white;
+            }
+            input{
+                width: 10vw;
+            }
+            button {
+                width: 2vw;
+            }
+            i, input::placeholder, input:not(:placeholder-shown), a{
+                color: white;
+            }
+        }
+        
+    }
+    p{
+        font-size: $nav_p_fontSize;
+        color: white;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+    li:hover{
+        text-decoration: underline;
+        background-color: green;
+    }
+    .activePage p{
+        color: #323ca8;
+    }
+    
+}
+/*Animations for navigation*/
+nav.scrolled{
+    background-color: black;
+    position: fixed;
+    transition: 0.3s ease-in;
+}
+
+/*Section*/
+section{
+    background-image: url("assets/homepageSwissMountains.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-top: -6%;
+    padding: 27% 5% 18% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1, p{
+        color: white;
+        text-align: center;
+    }
+    img{
+        height: $section_img_height;
+        width: $section_img_width;
+    }
+    hr {
+        width: 30vw;
+        background-color: white;
+    }
+    h1{
+        font-size: $section_h1_fontSize;
+    }
+    p{
+        font-size: $section_p_fontSize;
+    }
+}
+
+article {
+    margin-bottom: 3%;
+    
+    .item{
+        display: flex;
+        justify-content: center;
+        padding: 1% 5% 1% 5%;
+    }
+
+    .txtContainer{
+        width: 30%;
+    
+        display: flex;
+        flex-direction: column;
+        padding: $article_txtContainer_padding;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgContainer{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        > *{
+            background-color: black;
+            border-radius: 10px;
+        }
+
+        > .imgFrameCenter{
+            width: $article_centerImg_width;
+            height: $article_centerImg_height;
+        } 
+
+        > .imgFrameSide{
+            width:  $article_sideImg_width;
+            height: $article_sideImg_height;
+        } 
+    }
+    
+    .txtContainer{
+        > h2{
+            font-size: $article_h2_fontSize;
+        }
+        hr{
+            background-color: black;
+            width: $article_hr_width;
+        }
+        > p{
+            font-size: $article_p_fontSize;
+        }
+    } 
+    h1{
+        text-align: center;
+        font-size: $article_h1_fontSize;
+    }
+}
+
+/*Footer*/
+footer{
+    padding: 5% 7% 5% 7%;
+    background-color: black;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p, h1{
+        color: white;
+    }
+
+    p{
+        font-size: $footer_p_fontSize;
+    }
+    h1{
+        font-size: $footer_h1_fontSize;
+    }
+    
+    .socialMediaImgContainer{
+        margin: 5% auto 4% auto;
+        display: flex;
+        gap: 10%;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: $footer_img_size;
+            height: $footer_img_size;
+            border-radius: 50%;
+        }
+    }
+    #copyrightTxt{
+        font-size: 0.8vw;
+    }
+}
+
+/*
+Formula
+newHeight = (originalHeight * newWidth)/originalWidth
+*/
+
+/*Responsive Design*/
+@media only screen and (min-width: 800px) and (max-width: 1095px) {
+    body{
+        //background-color: #323ca8; //uncomment for testing
+    }
+}
+
+//search bar setting
+@media only screen and (max-width: 800px) {
+    body{
+        //background-color: purple; //uncomment for testing
+        nav {
+            ul {
+                > :nth-child(5){
+                    //
+                }
+            }
+        }
+    }
+}
+
+//for mobile screens and stuff
+@media screen and (max-width: 650px) {
+    body{
+        //background-color: green; //uncomment for testing
+        nav {
+            ul {
+                li {
+                    p{ 
+                        font-size: calc(#{$nav_p_fontSize} + 0.7vw);
+                    }
+                }
+                .companyBrand{
+                    p{
+                        font-size: calc(#{$nav_companyBrand_p_fontSize} + 0.7vw);
+                    }
+                }
+            }
+        }
+        article{
+            margin: 5% auto 5% auto;
+
+            .item{
+                align-items: center;
+                padding: auto 0 auto 0;
+
+                .txtContainer{
+                    width: 75%;
+                    h2{
+                        font-size: calc(#{$article_h2_fontSize} + 1vw);
+                    }
+                    p{
+                        font-size: calc(#{$article_p_fontSize} + 0.7vw);
+                    }
+                    a {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                .imgContainer{
+                    width: 100%;
+                    padding-top: 10%;
+                    > .imgFrameCenter{
+                        width: calc(#{$article_centerImg_width} + 10vw);
+                        height: calc(#{$article_centerImg_height} + 10vw);
+                    } 
+            
+                    > .imgFrameSide{
+                        width: calc(#{$article_sideImg_width} + 5vw);
+                        height: calc(#{$article_sideImg_height} + 5vw);
+                    } 
+                }
+            }
+
+            > :first-child, > :nth-child(3){//1st and 3rd div element
+                flex-direction: column-reverse;
+                hr {
+                    width: calc(#{$article_hr_width} + 13vw);
+                }
+            }
+
+            > :nth-child(2){//2nd div element
+                flex-direction: column;
+                hr {
+                    width: calc(#{$article_hr_width} + 20vw);
+                }
+            }
+        } 
+        
+        footer{
+            p{
+                font-size: calc(#{$footer_p_fontSize} + 0.7vw);
+            }
+            h1{
+                font-size: calc(#{$footer_h1_fontSize} + 0.7vw);
+            }
+        }
+    }
+}

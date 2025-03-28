@@ -1,0 +1,317 @@
+/*Predetermined Styles*/
+*{
+    box-sizing: border-box;
+    padding: 0.1px 0 0 0;
+    margin: 0;
+ }
+li{
+    list-style-type: none;
+}
+
+/*Global Styles*/
+* > hr{
+    height: 3px;
+}
+h2{
+    text-align: center;
+}
+a:hover{
+    background-color: #03c2fc;
+}
+
+:root{
+    --section-img-width: 75px; 
+    --section-img-height: 142px; 
+    --article-centerImg-width: 220px; 
+    --article-centerImg-height: 357px; 
+    --article-sideImg-width: 188px; 
+    --article-sideImg-height: 302px; 
+
+}
+
+/*Image Assets*/
+#mountain1{
+    background-image: url("assets/mount1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#mountain2{
+    background-image: url("assets/mount2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#mountain3{
+    background-image: url("assets/mount3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#lake1{
+    background-image: url("assets/lake1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#lake2{
+    background-image: url("assets/lake2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#lake3{
+    background-image: url("assets/lake3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#village1{
+    background-image: url("assets/village1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#village2{
+    background-image: url("assets/village2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#village3{
+    background-image: url("assets/village3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*Utility Classes*/
+/*SASS*/
+
+
+/*Testing*/
+
+/*
+.container > *,.item, .subItem, ul > *, .imgContainer, .txtContainer{
+    border: 1px solid black;
+}
+*/
+
+
+/*
+nav, nav > ul > *{
+    background-color: #75f0b9;
+}
+*/
+/*
+section > *{
+    background-color: #f599ff;
+}
+*/
+/*
+article * {
+    background-color: #fffa99;
+}
+*/
+
+/*
+Actual Classes
+*/
+
+/*Desktop Setting*/
+/*Navigation*/
+nav {
+    padding: 1% 1%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(255,255,255,0); 
+    transition: 0.3s ease-in;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1%;
+    margin: auto 70px auto 70px;
+}
+nav li{
+    padding: 3px 3px 3px 3px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-grow: .5;
+}
+li > div{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: -5.5px;
+}
+nav .companyBrand{
+    flex-grow: 4;
+    justify-content: flex-start;
+}
+nav .companyBrand p{
+    font-size: 1.5rem;
+}
+nav p{
+    font-size: 1.2rem;
+    color: white;
+}
+nav input, nav button {
+    border: none;
+    background-color: rgba(255,255,255,0); /*Transparent bg*/
+    border-bottom: 1px solid white;
+}
+nav i, nav input::placeholder, nav input:not(:placeholder-shown), nav a{
+    color: white;
+}
+nav a{
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+nav .activePage p{
+    color: #323ca8;
+}
+/*Animations for navigation*/
+
+nav.scrolled{
+    background-color: black;
+    position: fixed;
+    transition: 0.3s ease-in;
+}
+/*Section*/
+section{
+    background-image: url("assets/homepageSwissMountains.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-top: -6%;
+    padding: 27% 5% 18% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section h1, section p{
+    color: white;
+    text-align: center;
+}
+section img{
+    max-height: var(--section-img-height);
+    max-width: var(--section-img-width);
+}
+section > hr {
+    width: 500px;
+    background-color: white;
+}
+section > h1{
+    font-size: 4rem;
+}
+section > p{
+    font-size: 2rem;
+}
+
+
+/*Article*/
+article {
+    margin-bottom: 3%;
+}
+article .item{
+    display: flex;
+    justify-content: center;
+    padding: 1% 5% 1% 5%;
+}
+article .txtContainer{
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    align-items: center;
+    justify-content: center;
+}
+article .imgContainer{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/*Test Code*/
+article .imgContainer > .imgFrameCenter{
+    background-color: black;
+    width: var(--article-centerImg-width);
+    height: var(--article-centerImg-height);
+} 
+article .imgContainer > .imgFrameSide{
+    background-color: black;
+    width:  var(--article-sideImg-width);
+    height: var(--article-sideImg-height);
+} 
+article .imgContainer > *{
+    border-radius: 10px;
+}
+article hr{
+    background-color: black;
+    width: 100%;
+}
+.txtContainer > h2{
+    font-size: 1.7rem;
+}
+.txtContainer > p{
+    font-size: 1.4rem;
+}
+article h1{
+    text-align: center;
+    font-size: 4rem;
+}
+/*Footer*/
+footer{
+    padding: 5% 7% 5% 7%;
+    background-color: black;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer p, footer h1{
+    color: white;
+}
+footer p{
+    width : 400px;
+    font-size: 1.5rem;
+}
+footer h1{
+    font-size: 2rem;
+}
+footer .socialMediaImgContainer{
+    margin: 5% auto 4% auto;
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+}
+footer .socialMediaImgContainer img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+footer #copyrightTxt{
+    font-size: 0.8rem;
+}
+
+/*Responsive Design*/
+@media only screen and (max-width: 1095px) {
+    body{
+        background-color: #323ca8;
+    }
+    article h1{
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: green;
+    }
+}

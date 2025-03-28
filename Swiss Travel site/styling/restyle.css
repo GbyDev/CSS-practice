@@ -1,0 +1,279 @@
+/*Predetermined Styles*/
+/*Variables*/
+/*Global Attributes*/
+* {
+  box-sizing: border-box;
+  padding: 0.1px 0 0 0;
+  margin: 0;
+}
+* li {
+  list-style-type: none;
+}
+* hr {
+  height: 1px;
+  border: none;
+}
+* h2 {
+  text-align: center;
+}
+* a:hover {
+  background-color: #03c2fc;
+}
+
+nav {
+  padding: 1% 1%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0);
+  transition: 0.3s ease-in;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1%;
+  margin: auto 70px auto 70px;
+}
+nav .companyBrand {
+  flex-grow: 4;
+  justify-content: flex-start;
+}
+nav .companyBrand p {
+  font-size: 1.5vw;
+}
+nav li {
+  padding: 3px 3px 3px 3px;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-grow: 0.5;
+}
+nav li div {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: -5.5px;
+}
+nav li div input, nav li div button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0); /*Transparent bg*/
+  border-bottom: 1px solid white;
+}
+nav li div input {
+  width: 10vw;
+}
+nav li div button {
+  width: 2vw;
+}
+nav li div input::-moz-placeholder {
+  color: white;
+}
+nav li div input:not(:-moz-placeholder-shown) {
+  color: white;
+}
+nav li div i, nav li div input::placeholder, nav li div input:not(:placeholder-shown), nav li div a {
+  color: white;
+}
+nav p {
+  font-size: 1.2vw;
+  color: white;
+}
+nav a {
+  text-decoration: none;
+}
+nav li:hover {
+  text-decoration: underline;
+  background-color: green;
+}
+nav .activePage p {
+  color: #323ca8;
+}
+
+/*Animations for navigation*/
+nav.scrolled {
+  background-color: black;
+  position: fixed;
+  transition: 0.3s ease-in;
+}
+
+/*Section*/
+section {
+  background-image: url("assets/homepageSwissMountains.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -6%;
+  padding: 27% 5% 18% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section h1, section p {
+  color: white;
+  text-align: center;
+}
+section img {
+  height: 6.5vw;
+  width: 13vw;
+}
+section hr {
+  width: 30vw;
+  background-color: white;
+}
+section h1 {
+  font-size: 4vw;
+}
+section p {
+  font-size: 2vw;
+}
+
+article {
+  margin-bottom: 3%;
+}
+article .item {
+  display: flex;
+  justify-content: center;
+  padding: 1% 5% 1% 5%;
+}
+article .txtContainer {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  align-items: center;
+  justify-content: center;
+}
+article .imgContainer {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+article .imgContainer > * {
+  background-color: black;
+  border-radius: 10px;
+}
+article .imgContainer > .imgFrameCenter {
+  width: 13vw;
+  height: 28vw;
+}
+article .imgContainer > .imgFrameSide {
+  width: 13vw;
+  height: 24vw;
+}
+article .txtContainer > h2 {
+  font-size: 2.5vw;
+}
+article .txtContainer hr {
+  background-color: black;
+  width: 25vw;
+}
+article .txtContainer > p {
+  font-size: 1.5vw;
+}
+article h1 {
+  text-align: center;
+  font-size: 4vw;
+}
+
+/*Footer*/
+footer {
+  padding: 5% 7% 5% 7%;
+  background-color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer p, footer h1 {
+  color: white;
+}
+footer p {
+  font-size: 1.5vw;
+}
+footer h1 {
+  font-size: 2vw;
+}
+footer .socialMediaImgContainer {
+  margin: 5% auto 4% auto;
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+  align-items: center;
+}
+footer .socialMediaImgContainer img {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+}
+footer #copyrightTxt {
+  font-size: 0.8vw;
+}
+
+/*
+Formula
+newHeight = (originalHeight * newWidth)/originalWidth
+*/
+/*Responsive Design*/
+@media screen and (max-width: 650px) {
+  body nav ul li p {
+    font-size: calc(1.2vw + 0.7vw);
+  }
+  body nav ul .companyBrand p {
+    font-size: calc(1.5vw + 0.7vw);
+  }
+  body article {
+    margin: 5% auto 5% auto;
+  }
+  body article .item {
+    align-items: center;
+    padding: auto 0 auto 0;
+  }
+  body article .item .txtContainer {
+    width: 75%;
+  }
+  body article .item .txtContainer h2 {
+    font-size: calc(2.5vw + 1vw);
+  }
+  body article .item .txtContainer p {
+    font-size: calc(1.5vw + 0.7vw);
+  }
+  body article .item .txtContainer a {
+    display: flex;
+    justify-content: center;
+  }
+  body article .item .imgContainer {
+    width: 100%;
+    padding-top: 10%;
+  }
+  body article .item .imgContainer > .imgFrameCenter {
+    width: calc(13vw + 10vw);
+    height: calc(28vw + 10vw);
+  }
+  body article .item .imgContainer > .imgFrameSide {
+    width: calc(13vw + 5vw);
+    height: calc(24vw + 5vw);
+  }
+  body article > :first-child, body article > :nth-child(3) {
+    flex-direction: column-reverse;
+  }
+  body article > :first-child hr, body article > :nth-child(3) hr {
+    width: calc(25vw + 13vw);
+  }
+  body article > :nth-child(2) {
+    flex-direction: column;
+  }
+  body article > :nth-child(2) hr {
+    width: calc(25vw + 20vw);
+  }
+  body footer p {
+    font-size: calc(1.5vw + 0.7vw);
+  }
+  body footer h1 {
+    font-size: calc(2vw + 0.7vw);
+  }
+}/*# sourceMappingURL=restyle.css.map */
